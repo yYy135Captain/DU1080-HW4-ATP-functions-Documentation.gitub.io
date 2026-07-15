@@ -1,8 +1,28 @@
 # (PART\*) Instruments
 # AGMTestBox {-}
-## 
 
+## **SendAGMPacket** 
 ### Header
+`int DLLEXPORT __stdcall SendAGMPacket(char *port, int baud, char *command, int command_size, char *status_message)`
+
+### Purpose
+### Parameters
+### Return Value
+### Example
+
+## **RIBVideoControl**
+### Header
+`int DLLEXPORT __stdcall RIBVideoControl(int enable, char *port, int baud, char *status_message)`
+
+### Purpose
+### Parameters
+### Return Value
+### Example
+
+## **AGMPowerControl**
+### Header
+`int DLLEXPORT __stdcall AGMPowerControl(char* state, int plug, char* IP_address, char *status_message)`
+
 ### Purpose
 ### Parameters
 ### Return Value

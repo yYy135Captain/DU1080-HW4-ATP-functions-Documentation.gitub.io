@@ -5,10 +5,20 @@
   It supports initialization, relay switching, signal routing, and discuss signal control.
 
 ## **RelayInitialize**
-### Usage
+### Header
+`int DLLEXPORT _stdcall RelayInitialize(char *resource_name, ViSession *session, ViBoolean *test_result, char *status_message);`
+
 ### Parameter
+`resource_name`
+
+`session`
+
+`test_result`
+
+`status_message`
+
 ### Purpose
-  Initialize the NI switch module and establish a communication seesion with the switch hardware.
+  Initialize the NI switch module and establish a communication session with the switch hardware.
   
   If initialization succeeds, a valid NI Switch session is returned. Otherwise, an error message is generated and stored in status_message.
 
@@ -19,11 +29,18 @@
   - A non-zero value indicates a NI Switch or VISA error occurred during initialization.
 
 ### Example
-### Error Codes
 
 
 ## **RelaySet**
 ### Header
+`int DLLEXPORT _stdcall RelaySet(ViSession session, char channel[], int operation);`
+
+### Purpose
+  Controls the open and closed state of specified relay channel.
+  
+  The function first checks whether each requested connection path already exists. It disconnect the existing path when necessary and then establishes the path required for the selected operation.
+
+
 ### Parameters
 - `session`
   An active NI Switch session established by `RelayInitialize`.
@@ -35,19 +52,18 @@
   
   - Any non-zero value closes the switch by disconnecting the normally closed connection and connecting the normally open connection.
   
-### Purpose
-  Controls the open and closed state of specified relay channel.
-  
-  The function first checks whether each requested connection path already exists. It disconnect the existing path when necessary and then establishes the path required for the selected operation.
-
 ### Return Value
-  Returns an integer code containing the accumulated result of the NI Switch operation.
-  
+Return 0: errors
+Return -1:
+Return -2:
+
 ### Example
-### Error Codes
+
   
 ## **RelayClose**
 ### Header
+`int DLLEXPORT _stdcall RelayClose(ViSession session, char *status_message);`
+
 ### Purpose
 ### Parameters
 ### Return Value
@@ -55,6 +71,8 @@
 
 ## **ReplayOpenAll**
 ### Header
+`int DLLEXPORT _stdcall RelayOpenAll(ViSession session);`
+
 ### Purpose
 ### Parameters
 ### Return Value
@@ -62,6 +80,8 @@
 
 ## **RelaySignalSet**
 ### Header
+`int DLLEXPORT _stdcall RelaySignalSet(ViSession session, char *signal_name, void **signal_list, char *status_message);`
+
 ### Purpose
 ### Parameters
 ### Return Value
@@ -69,6 +89,8 @@
 
 ## **SetNICDiscrete**
 ### Header
+`int DLLEXPORT __stdcall SetNICDiscrete(ViSession *session, ViBoolean *test_result, char *status_message);`
+
 ### Purpose
 ### Parameters
 ### Return Value
@@ -76,6 +98,8 @@
 
 ## **SetNICDiscreteByData**
 ### Header
+`int DLLEXPORT __stdcall SetNICDiscreteByData(ViSession *session, uint8_t data, void **signal_list, char *status_message);`
+
 ### Purpose
 ### Parameters
 ### Return Value
@@ -83,6 +107,8 @@
 
 ## **SetProcDiscreteByData**
 ### Header
+`int DLLEXPORT __stdcall SetProcDiscreteByData(ViSession *session, uint32_t data, void **signal_list, char *status_message);`
+
 ### Purpose
 ### Parameters
 ### Return Value

@@ -29,8 +29,9 @@
   The relay channel to control. The function uses this value to identify the corresponding common (`com`), normally closed (`nc`), and normally
 - `operation`
   Specifies the requested relay state:
+  - '0' opens the switch by disconnecting the normally open connection and connecting the normally closed connection.
   
-  - 
+  - Any non-zero 
   
 ### Purpose
   

@@ -1,17 +1,28 @@
 # Relay {-}
 ## Overview {-}
-  RelayInitialize opens a connection to the NI switch hardware. If the initialization succeeds, the session handle is returned and the test_result flag is set to TRUE. Otherwise, an error message is stored in status_message.
+  The Relay library provides functions for controlling NI switch hardware used in the DU1080 HW4 ATP system.
+  
+  It supports initialization, relay switching, signal routing, and discuss signal control.
 
 ## RelayInitialize
 ### Purpose
-  Initialize the NI switch module and establish a VI session
+  Initialize the NI switch module and establish a communication seesion with the switch hardware.
+  
+  If initialization succeeds, a valid NI Switch session is returned. Otherwise, an error message is generated and stored in status_message.
 
 ### Retun Value
   Returns an integer status code.
+  
+  - 0 indicates the operation completed successfully.
+  - A non-zero value indicates a NI Switch or VISA error occurred during initialization.
+
+### Example
+### Error Codes
 
 
 ## RelaySet
 ### Purpose
+  
 
 ### Retun Value
 

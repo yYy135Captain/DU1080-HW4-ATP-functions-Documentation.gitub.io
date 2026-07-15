@@ -2,6 +2,8 @@ part-instruments
 relayinitialize
 purpose
 retun-value
+example
+error-codes
 relayset
 purpose-1
 retun-value-1

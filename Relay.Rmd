@@ -1,16 +1,18 @@
 # Relay {-}
-## Overview {-}
+## **Overview** {-}
   The Relay library provides functions for controlling NI switch hardware used in the DU1080 HW4 ATP system.
   
   It supports initialization, relay switching, signal routing, and discuss signal control.
 
-## RelayInitialize
+## **RelayInitialize**
+### Usage
+### Parameter
 ### Purpose
   Initialize the NI switch module and establish a communication seesion with the switch hardware.
   
   If initialization succeeds, a valid NI Switch session is returned. Otherwise, an error message is generated and stored in status_message.
 
-### Retun Value
+### Return Value
   Returns an integer status code.
   
   - 0 indicates the operation completed successfully.
@@ -20,8 +22,8 @@
 ### Error Codes
 
 
-## RelaySet
-### Usage
+## **RelaySet**
+### Header
 ### Parameters
 - `session`
   An active NI Switch session established by `RelayInitialize`.
@@ -31,40 +33,57 @@
   Specifies the requested relay state:
   - '0' opens the switch by disconnecting the normally open connection and connecting the normally closed connection.
   
-  - Any non-zero 
+  - Any non-zero value closes the switch by disconnecting the normally closed connection and connecting the normally open connection.
   
 ### Purpose
+  Controls the open and closed state of specified relay channel.
   
+  The function first checks whether each requested connection path already exists. It disconnect the existing path when necessary and then establishes the path required for the selected operation.
 
-### Retun Value
-
-## RelayClose
+### Return Value
+  Returns an integer code containing the accumulated result of the NI Switch operation.
+  
+### Example
+### Error Codes
+  
+## **RelayClose**
+### Header
 ### Purpose
+### Parameters
+### Return Value
+### Example
 
-### Retun Value
-
-## ReplayOpenAll
+## **ReplayOpenAll**
+### Header
 ### Purpose
+### Parameters
+### Return Value
+### Example
 
-### Retun Value
-
-## RelaySignalSet
+## **RelaySignalSet**
+### Header
 ### Purpose
+### Parameters
+### Return Value
+### Example
 
-### Retun Value
-
-## SetNICDiscrete
+## **SetNICDiscrete**
+### Header
 ### Purpose
+### Parameters
+### Return Value
+### Example
 
-### Retun Value
-
-## SetNICDiscreteByData
+## **SetNICDiscreteByData**
+### Header
 ### Purpose
+### Parameters
+### Return Value
+### Example
 
-### Retun Value
-
-## SetProcDiscreteByData
+## **SetProcDiscreteByData**
+### Header
 ### Purpose
-
-### Retun Value
-
+### Parameters
+### Return Value
+### Example

@@ -21,9 +21,9 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
-<meta name="description" content="Overview   1.1 SendAGMPacket  1.1.1 Header int DLLEXPORT __stdcall SendAGMPacket(char *port, int baud, char *command, int command_size, char *status_message)  1.1.2 Purpose   1.1.3 Parameters...">
-<meta property="og:description" content="Overview   1.1 SendAGMPacket  1.1.1 Header int DLLEXPORT __stdcall SendAGMPacket(char *port, int baud, char *command, int command_size, char *status_message)  1.1.2 Purpose   1.1.3 Parameters...">
-<meta name="twitter:description" content="Overview   1.1 SendAGMPacket  1.1.1 Header int DLLEXPORT __stdcall SendAGMPacket(char *port, int baud, char *command, int command_size, char *status_message)  1.1.2 Purpose   1.1.3 Parameters...">
+<meta name="description" content="Overview Controls communication with the AGM DU Test Box.  1.1 SendAGMPacket  1.1.1 Header int DLLEXPORT __stdcall SendAGMPacket(char *port, int baud, char *command, int command_size, char...">
+<meta property="og:description" content="Overview Controls communication with the AGM DU Test Box.  1.1 SendAGMPacket  1.1.1 Header int DLLEXPORT __stdcall SendAGMPacket(char *port, int baud, char *command, int command_size, char...">
+<meta name="twitter:description" content="Overview Controls communication with the AGM DU Test Box.  1.1 SendAGMPacket  1.1.1 Header int DLLEXPORT __stdcall SendAGMPacket(char *port, int baud, char *command, int command_size, char...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -74,6 +74,7 @@
 <h2>
 <strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview"><i class="fas fa-link"></i></a>
 </h2>
+<p>Controls communication with the AGM DU Test Box.</p>
 </div>
 <div id="sendagmpacket" class="section level2" number="1.1">
 <h2>
@@ -89,12 +90,18 @@
 <h3>
 <span class="header-section-number">1.1.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose"><i class="fas fa-link"></i></a>
 </h3>
+<p>Send a control packet to the AGM Test Box through an RS-232 COM port and reads the response from the device.</p>
 </div>
 <div id="parameters" class="section level3" number="1.1.3">
 <h3>
 <span class="header-section-number">1.1.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="40%">
+<col width="29%">
+<col width="29%">
+</colgroup>
 <thead><tr class="header">
 <th>Parameter</th>
 <th>Type</th>
@@ -104,27 +111,27 @@
 <tr class="odd">
 <td><code>* port</code></td>
 <td><code>char</code></td>
-<td></td>
+<td>COM port name.</td>
 </tr>
 <tr class="even">
 <td><code>baud</code></td>
 <td><code>int</code></td>
-<td></td>
+<td>Communicating baud rate.</td>
 </tr>
 <tr class="odd">
 <td><code>*command</code></td>
 <td><code>char *</code></td>
-<td></td>
+<td>Command sent to the AGM Test Box.</td>
 </tr>
 <tr class="even">
 <td><code>command_size</code></td>
 <td><code>int</code></td>
-<td></td>
+<td>Number of bytes in the command.</td>
 </tr>
 <tr class="odd">
 <td><code>*status_message</code></td>
 <td><code>char *</code></td>
-<td></td>
+<td>Stores the device response or error message.</td>
 </tr>
 </tbody>
 </table></div>
@@ -133,6 +140,38 @@
 <h3>
 <span class="header-section-number">1.1.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="36%">
+<col width="63%">
+</colgroup>
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>AGM_SUCCESS</code></td>
+<td>command completed successfully.</td>
+</tr>
+<tr class="even">
+<td><code>AGM_ERR_INVALID_PARAMETER</code></td>
+<td>A parameter is invalid or missing.</td>
+</tr>
+<tr class="odd">
+<td><code>AGM_ERR_OPEN_PORT</code></td>
+<td>The COM port could not be opened.</td>
+</tr>
+<tr class="even">
+<td><code>AGM_ERR_TIMEOUT</code></td>
+<td>No response was received before timeout.</td>
+</tr>
+<tr class="odd">
+<td><code>AGM_ERR_READ_FAILURE</code></td>
+<td>The response could not be read from the COM port.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="example" class="section level3" number="1.1.5">
 <h3>
@@ -154,28 +193,71 @@
 <h3>
 <span class="header-section-number">1.2.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-1"><i class="fas fa-link"></i></a>
 </h3>
+<p>Enables or disables the RIB video output on the AGM Test Box by sending the appropriate control command the COM port.</p>
 </div>
 <div id="parameters-1" class="section level3" number="1.2.3">
 <h3>
 <span class="header-section-number">1.2.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-1"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="18%">
+<col width="11%">
+<col width="70%">
+</colgroup>
 <thead><tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr></tbody>
+<tbody>
+<tr class="odd">
+<td><code>enable</code></td>
+<td><code>int</code></td>
+<td>Selects the video output state: <code>1</code> enables and <code>0</code> disables.</td>
+</tr>
+<tr class="even">
+<td><code>port</code></td>
+<td><code>char *</code></td>
+<td>COM port name used to communicate with AGM Test Box.</td>
+</tr>
+<tr class="odd">
+<td><code>baud</code></td>
+<td><code>int</code></td>
+<td>Communication baud rate.</td>
+</tr>
+<tr class="even">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores the device response or error message.</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="return-value-1" class="section level3" number="1.2.4">
 <h3>
 <span class="header-section-number">1.2.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-1"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="28%">
+<col width="71%">
+</colgroup>
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>AGM_SUCCESS</code></td>
+<td>Video control command completed successfully.</td>
+</tr>
+<tr class="even">
+<td><code>AGM_ERR_INVALID_PARAMETER</code></td>
+<td>The <code>enable</code> value is not <code>0</code> or <code>1</code>, or another parameter is invalid.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="example-1" class="section level3" number="1.2.5">
 <h3>
@@ -197,28 +279,75 @@
 <h3>
 <span class="header-section-number">1.3.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-2"><i class="fas fa-link"></i></a>
 </h3>
+<p>Controls the power state of the AGM Test Box through the WTI Power Plug using an HTTP command.</p>
 </div>
 <div id="parameters-2" class="section level3" number="1.3.3">
 <h3>
 <span class="header-section-number">1.3.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-2"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="18%">
+<col width="10%">
+<col width="70%">
+</colgroup>
 <thead><tr class="header">
 <th>Parameter</th>
 <th>Type</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-</tr></tbody>
+<tbody>
+<tr class="odd">
+<td><code>state</code></td>
+<td><code>char*</code></td>
+<td>Power state. Valid values are <code>"ON"</code>, <code>"OFF"</code>, or <code>"BOOT"</code>.</td>
+</tr>
+<tr class="even">
+<td><code>plug</code></td>
+<td><code>int</code></td>
+<td>Plug number. Valid values are ‘3’ (Top AGM) or <code>4</code> (Bottom AGM).</td>
+</tr>
+<tr class="odd">
+<td><code>IP_address</code></td>
+<td><code>char *</code></td>
+<td>IP address of the WTI Power Plug.</td>
+</tr>
+<tr class="even">
+<td><code>status_message</code></td>
+<td><code>char *</code></td>
+<td>Stores the operation status or error message.</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="return-value-2" class="section level3" number="1.3.4">
 <h3>
 <span class="header-section-number">1.3.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-2"><i class="fas fa-link"></i></a>
 </h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>Power command completed successfully.</td>
+</tr>
+<tr class="even">
+<td><code>1</code></td>
+<td>Invalid power state.</td>
+</tr>
+<tr class="odd">
+<td><code>2</code></td>
+<td>Invalid plug number.</td>
+</tr>
+<tr class="even">
+<td><code>3</code></td>
+<td>Invalid IP address.</td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div id="example-2" class="section level3" number="1.3.5">
 <h3>

@@ -13,7 +13,7 @@ rmd_files:
   - "MUX.Rmd"
   - "MxFoundation.Rmd"
   - "Photometer.Rmd"
-  - "PickeringRelay.Rmd"yyy135captain.github.io.
+  - "PickeringRelay.Rmd"
   - "PowerSupply.Rmd"
   - "Relay.Rmd"
   - "SerialUART.Rmd"

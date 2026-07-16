@@ -1,9 +1,11 @@
 bookdown::bs4_book:
+  favicon: favicon.ico
+
   theme:
     primary: "#FF4400"
-    secondary: "#1E1E25"
-    bg: "#FFFFFF"
-    fg: "#1E1E25"
+    secondary: "#FF4400"
+    bg: "#1E1E25"
+    fg: "#FFFFFF"
     base_font:
       google: Sen
     heading_font: 

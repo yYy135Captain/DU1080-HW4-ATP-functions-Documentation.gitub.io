@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>MxFoundation | DU1080 HW4 ATP Function Documentation</title>
+<meta name="author" content="">
+<meta name="generator" content="bookdown 0.47 with bs4_book()">
+<meta property="og:title" content="MxFoundation | DU1080 HW4 ATP Function Documentation">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MxFoundation | DU1080 HW4 ATP Function Documentation">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Sen-0.4.10/font.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
+<link href="libs/Bitter-0.4.10/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<meta name="description" content="Overview //MxFoundation Functions  1.9 MxFoundationInitialize  1.9.1 Header   1.9.2 Purpose   1.9.3 Parameter Parameter Type Description    1.9.4 Return Value Error Description    1.9.5 Example  ...">
+<meta property="og:description" content="Overview //MxFoundation Functions  1.9 MxFoundationInitialize  1.9.1 Header   1.9.2 Purpose   1.9.3 Parameter Parameter Type Description    1.9.4 Return Value Error Description    1.9.5 Example  ...">
+<meta name="twitter:description" content="Overview //MxFoundation Functions  1.9 MxFoundationInitialize  1.9.1 Header   1.9.2 Purpose   1.9.3 Parameter Parameter Type Description    1.9.4 Return Value Error Description    1.9.5 Example  ...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">DU1080 HW4 ATP Function Documentation</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">MxFoundation</a></li></ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="mxfoundation" class="section level1 unnumbered">
+<h1>MxFoundation<a class="anchor" aria-label="anchor" href="#mxfoundation"><i class="fas fa-link"></i></a>
+</h1>
+<div id="overview-2" class="section level2 unnumbered">
+<h2>
+<strong>Overview</strong><a class="anchor" aria-label="anchor" href="#overview-2"><i class="fas fa-link"></i></a>
+</h2>
+<p>//MxFoundation Functions</p>
+</div>
+<div id="mxfoundationinitialize" class="section level2" number="1.9">
+<h2>
+<span class="header-section-number">1.9</span> <strong>MxFoundationInitialize</strong><a class="anchor" aria-label="anchor" href="#mxfoundationinitialize"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-8" class="section level3" number="1.9.1">
+<h3>
+<span class="header-section-number">1.9.1</span> Header<a class="anchor" aria-label="anchor" href="#header-8"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-8" class="section level3" number="1.9.2">
+<h3>
+<span class="header-section-number">1.9.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-8"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-5" class="section level3" number="1.9.3">
+<h3>
+<span class="header-section-number">1.9.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-5"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-8" class="section level3" number="1.9.4">
+<h3>
+<span class="header-section-number">1.9.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-8"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-8" class="section level3" number="1.9.5">
+<h3>
+<span class="header-section-number">1.9.5</span> Example<a class="anchor" aria-label="anchor" href="#example-8"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="mxfoundationclose" class="section level2" number="1.10">
+<h2>
+<span class="header-section-number">1.10</span> <strong>MxFoundationClose</strong><a class="anchor" aria-label="anchor" href="#mxfoundationclose"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-9" class="section level3" number="1.10.1">
+<h3>
+<span class="header-section-number">1.10.1</span> Header<a class="anchor" aria-label="anchor" href="#header-9"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-9" class="section level3" number="1.10.2">
+<h3>
+<span class="header-section-number">1.10.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-9"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-6" class="section level3" number="1.10.3">
+<h3>
+<span class="header-section-number">1.10.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-6"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-9" class="section level3" number="1.10.4">
+<h3>
+<span class="header-section-number">1.10.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-9"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-9" class="section level3" number="1.10.5">
+<h3>
+<span class="header-section-number">1.10.5</span> Example<a class="anchor" aria-label="anchor" href="#example-9"><i class="fas fa-link"></i></a>
+</h3>
+<p>//ARINC429 Functions</p>
+</div>
+</div>
+<div id="arinc429channelinitialize" class="section level2" number="1.11">
+<h2>
+<span class="header-section-number">1.11</span> <strong>ARINC429ChannelInitialize</strong><a class="anchor" aria-label="anchor" href="#arinc429channelinitialize"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-10" class="section level3" number="1.11.1">
+<h3>
+<span class="header-section-number">1.11.1</span> Header<a class="anchor" aria-label="anchor" href="#header-10"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-10" class="section level3" number="1.11.2">
+<h3>
+<span class="header-section-number">1.11.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-10"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-7" class="section level3" number="1.11.3">
+<h3>
+<span class="header-section-number">1.11.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-7"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-10" class="section level3" number="1.11.4">
+<h3>
+<span class="header-section-number">1.11.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-10"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-10" class="section level3" number="1.11.5">
+<h3>
+<span class="header-section-number">1.11.5</span> Example<a class="anchor" aria-label="anchor" href="#example-10"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc429setupreceivedata" class="section level2" number="1.12">
+<h2>
+<span class="header-section-number">1.12</span> <strong>Arinc429SetupReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc429setupreceivedata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-11" class="section level3" number="1.12.1">
+<h3>
+<span class="header-section-number">1.12.1</span> Header<a class="anchor" aria-label="anchor" href="#header-11"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-11" class="section level3" number="1.12.2">
+<h3>
+<span class="header-section-number">1.12.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-11"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-8" class="section level3" number="1.12.3">
+<h3>
+<span class="header-section-number">1.12.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-8"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>receive_channel</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>speed</code></td>
+<td><code>BOOL</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>parity</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>count</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>*receive_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-11" class="section level3" number="1.12.4">
+<h3>
+<span class="header-section-number">1.12.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-11"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-11" class="section level3" number="1.12.5">
+<h3>
+<span class="header-section-number">1.12.5</span> Example<a class="anchor" aria-label="anchor" href="#example-11"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc429senddata" class="section level2" number="1.13">
+<h2>
+<span class="header-section-number">1.13</span> <strong>Arinc429SendData</strong><a class="anchor" aria-label="anchor" href="#arinc429senddata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-12" class="section level3" number="1.13.1">
+<h3>
+<span class="header-section-number">1.13.1</span> Header<a class="anchor" aria-label="anchor" href="#header-12"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-12" class="section level3" number="1.13.2">
+<h3>
+<span class="header-section-number">1.13.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-12"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-9" class="section level3" number="1.13.3">
+<h3>
+<span class="header-section-number">1.13.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-9"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>*arinc429_transmit_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>*arinc429_schedule_handle</code></td>
+<td><code>HMXF_SCHED</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>*transmit_channel</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>send_rate</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>speed</code></td>
+<td><code>BOOL</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>parity</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>transmit_data</code></td>
+<td><code>unsigned int</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>delay</code></td>
+<td><code>unsigned int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-12" class="section level3" number="1.13.4">
+<h3>
+<span class="header-section-number">1.13.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-12"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-12" class="section level3" number="1.13.5">
+<h3>
+<span class="header-section-number">1.13.5</span> Example<a class="anchor" aria-label="anchor" href="#example-12"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc429receivedata" class="section level2" number="1.14">
+<h2>
+<span class="header-section-number">1.14</span> <strong>Arinc429ReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc429receivedata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-13" class="section level3" number="1.14.1">
+<h3>
+<span class="header-section-number">1.14.1</span> Header<a class="anchor" aria-label="anchor" href="#header-13"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-13" class="section level3" number="1.14.2">
+<h3>
+<span class="header-section-number">1.14.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-13"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-10" class="section level3" number="1.14.3">
+<h3>
+<span class="header-section-number">1.14.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-10"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>count</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>receive_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>*received_data</code></td>
+<td><code>uint32</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-13" class="section level3" number="1.14.4">
+<h3>
+<span class="header-section-number">1.14.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-13"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-13" class="section level3" number="1.14.5">
+<h3>
+<span class="header-section-number">1.14.5</span> Example<a class="anchor" aria-label="anchor" href="#example-13"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc429freebuffers" class="section level2" number="1.15">
+<h2>
+<span class="header-section-number">1.15</span> <strong>Arinc429FreeBuffers</strong><a class="anchor" aria-label="anchor" href="#arinc429freebuffers"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-14" class="section level3" number="1.15.1">
+<h3>
+<span class="header-section-number">1.15.1</span> Header<a class="anchor" aria-label="anchor" href="#header-14"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-14" class="section level3" number="1.15.2">
+<h3>
+<span class="header-section-number">1.15.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-14"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-11" class="section level3" number="1.15.3">
+<h3>
+<span class="header-section-number">1.15.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-11"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>arinc429_transmit_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>arinc429_receive_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>arinc429_schedule_handle</code></td>
+<td><code>HMXF_SCHED</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-14" class="section level3" number="1.15.4">
+<h3>
+<span class="header-section-number">1.15.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-14"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-14" class="section level3" number="1.15.5">
+<h3>
+<span class="header-section-number">1.15.5</span> Example<a class="anchor" aria-label="anchor" href="#example-14"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc429selftest" class="section level2" number="1.16">
+<h2>
+<span class="header-section-number">1.16</span> <strong>Arinc429SelfTest</strong><a class="anchor" aria-label="anchor" href="#arinc429selftest"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-15" class="section level3" number="1.16.1">
+<h3>
+<span class="header-section-number">1.16.1</span> Header<a class="anchor" aria-label="anchor" href="#header-15"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-15" class="section level3" number="1.16.2">
+<h3>
+<span class="header-section-number">1.16.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-15"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-12" class="section level3" number="1.16.3">
+<h3>
+<span class="header-section-number">1.16.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-12"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>transmit_channel</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>receive_channel</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>data</code></td>
+<td><code>unsigned int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-15" class="section level3" number="1.16.4">
+<h3>
+<span class="header-section-number">1.16.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-15"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-15" class="section level3" number="1.16.5">
+<h3>
+<span class="header-section-number">1.16.5</span> Example<a class="anchor" aria-label="anchor" href="#example-15"><i class="fas fa-link"></i></a>
+</h3>
+<p>//ARINC708 Functions</p>
+</div>
+</div>
+<div id="arinc708channelinitialize" class="section level2" number="1.17">
+<h2>
+<span class="header-section-number">1.17</span> <strong>ARINC708ChannelInitialize</strong><a class="anchor" aria-label="anchor" href="#arinc708channelinitialize"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-16" class="section level3" number="1.17.1">
+<h3>
+<span class="header-section-number">1.17.1</span> Header<a class="anchor" aria-label="anchor" href="#header-16"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-16" class="section level3" number="1.17.2">
+<h3>
+<span class="header-section-number">1.17.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-16"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-13" class="section level3" number="1.17.3">
+<h3>
+<span class="header-section-number">1.17.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-13"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-16" class="section level3" number="1.17.4">
+<h3>
+<span class="header-section-number">1.17.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-16"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-16" class="section level3" number="1.17.5">
+<h3>
+<span class="header-section-number">1.17.5</span> Example<a class="anchor" aria-label="anchor" href="#example-16"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc708setupreceivedata" class="section level2" number="1.18">
+<h2>
+<span class="header-section-number">1.18</span> <strong>Arinc708SetupReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc708setupreceivedata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-17" class="section level3" number="1.18.1">
+<h3>
+<span class="header-section-number">1.18.1</span> Header<a class="anchor" aria-label="anchor" href="#header-17"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-17" class="section level3" number="1.18.2">
+<h3>
+<span class="header-section-number">1.18.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-17"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-14" class="section level3" number="1.18.3">
+<h3>
+<span class="header-section-number">1.18.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-14"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>receive_channel</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>*receive_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-17" class="section level3" number="1.18.4">
+<h3>
+<span class="header-section-number">1.18.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-17"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-17" class="section level3" number="1.18.5">
+<h3>
+<span class="header-section-number">1.18.5</span> Example<a class="anchor" aria-label="anchor" href="#example-17"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc708senddata" class="section level2" number="1.19">
+<h2>
+<span class="header-section-number">1.19</span> <strong>Arinc708SendData</strong><a class="anchor" aria-label="anchor" href="#arinc708senddata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-18" class="section level3" number="1.19.1">
+<h3>
+<span class="header-section-number">1.19.1</span> Header<a class="anchor" aria-label="anchor" href="#header-18"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-18" class="section level3" number="1.19.2">
+<h3>
+<span class="header-section-number">1.19.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-18"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-15" class="section level3" number="1.19.3">
+<h3>
+<span class="header-section-number">1.19.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-15"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>*arinc708_transmit_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>*arinc708_schedule_handle</code></td>
+<td><code>HMXF_SCHED</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>transmit_channel</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>send_rate</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>transmit_data</code></td>
+<td><code>unsigned int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-18" class="section level3" number="1.19.4">
+<h3>
+<span class="header-section-number">1.19.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-18"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-18" class="section level3" number="1.19.5">
+<h3>
+<span class="header-section-number">1.19.5</span> Example<a class="anchor" aria-label="anchor" href="#example-18"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc708receivedata" class="section level2" number="1.20">
+<h2>
+<span class="header-section-number">1.20</span> <strong>Arinc708ReceiveData</strong><a class="anchor" aria-label="anchor" href="#arinc708receivedata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-19" class="section level3" number="1.20.1">
+<h3>
+<span class="header-section-number">1.20.1</span> Header<a class="anchor" aria-label="anchor" href="#header-19"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-19" class="section level3" number="1.20.2">
+<h3>
+<span class="header-section-number">1.20.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-19"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-16" class="section level3" number="1.20.3">
+<h3>
+<span class="header-section-number">1.20.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-16"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>count</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>receive_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>*received_data</code></td>
+<td><code>uint32</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-19" class="section level3" number="1.20.4">
+<h3>
+<span class="header-section-number">1.20.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-19"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-19" class="section level3" number="1.20.5">
+<h3>
+<span class="header-section-number">1.20.5</span> Example<a class="anchor" aria-label="anchor" href="#example-19"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc708freebuffers" class="section level2" number="1.21">
+<h2>
+<span class="header-section-number">1.21</span> <strong>Arinc708FreeBuffers</strong><a class="anchor" aria-label="anchor" href="#arinc708freebuffers"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-20" class="section level3" number="1.21.1">
+<h3>
+<span class="header-section-number">1.21.1</span> Header<a class="anchor" aria-label="anchor" href="#header-20"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-20" class="section level3" number="1.21.2">
+<h3>
+<span class="header-section-number">1.21.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-20"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-17" class="section level3" number="1.21.3">
+<h3>
+<span class="header-section-number">1.21.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-17"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>arinc708_transmit_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>arinc708_receive_buffer</code></td>
+<td><code>HMXF_BUFFER</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>arinc708_schedule_handle</code></td>
+<td><code>HMXF_SCHED</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-20" class="section level3" number="1.21.4">
+<h3>
+<span class="header-section-number">1.21.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-20"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-20" class="section level3" number="1.21.5">
+<h3>
+<span class="header-section-number">1.21.5</span> Example<a class="anchor" aria-label="anchor" href="#example-20"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc708selftest" class="section level2" number="1.22">
+<h2>
+<span class="header-section-number">1.22</span> <strong>Arinc708SelfTest</strong><a class="anchor" aria-label="anchor" href="#arinc708selftest"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-21" class="section level3" number="1.22.1">
+<h3>
+<span class="header-section-number">1.22.1</span> Header<a class="anchor" aria-label="anchor" href="#header-21"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-21" class="section level3" number="1.22.2">
+<h3>
+<span class="header-section-number">1.22.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-21"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-18" class="section level3" number="1.22.3">
+<h3>
+<span class="header-section-number">1.22.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-18"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>transmit_channel</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>receive_channel</code></td>
+<td><code>uint64</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>data</code></td>
+<td><code>unsigned int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-21" class="section level3" number="1.22.4">
+<h3>
+<span class="header-section-number">1.22.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-21"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-21" class="section level3" number="1.22.5">
+<h3>
+<span class="header-section-number">1.22.5</span> Example<a class="anchor" aria-label="anchor" href="#example-21"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+</div>
+<div id="arinc708displaydataarray" class="section level2" number="1.23">
+<h2>
+<span class="header-section-number">1.23</span> <strong>Arinc708DisplayDataArray</strong><a class="anchor" aria-label="anchor" href="#arinc708displaydataarray"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-22" class="section level3" number="1.23.1">
+<h3>
+<span class="header-section-number">1.23.1</span> Header<a class="anchor" aria-label="anchor" href="#header-22"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-22" class="section level3" number="1.23.2">
+<h3>
+<span class="header-section-number">1.23.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-22"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-19" class="section level3" number="1.23.3">
+<h3>
+<span class="header-section-number">1.23.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-19"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="return-value-22" class="section level3" number="1.23.4">
+<h3>
+<span class="header-section-number">1.23.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-22"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-22" class="section level3" number="1.23.5">
+<h3>
+<span class="header-section-number">1.23.5</span> Example<a class="anchor" aria-label="anchor" href="#example-22"><i class="fas fa-link"></i></a>
+</h3>
+<p>//MISC Helper</p>
+</div>
+</div>
+<div id="setparitybit" class="section level2" number="1.24">
+<h2>
+<span class="header-section-number">1.24</span> <strong>SetParityBit</strong><a class="anchor" aria-label="anchor" href="#setparitybit"><i class="fas fa-link"></i></a>
+</h2>
+<div id="header-23" class="section level3" number="1.24.1">
+<h3>
+<span class="header-section-number">1.24.1</span> Header<a class="anchor" aria-label="anchor" href="#header-23"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="purpose-23" class="section level3" number="1.24.2">
+<h3>
+<span class="header-section-number">1.24.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-23"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="parameter-20" class="section level3" number="1.24.3">
+<h3>
+<span class="header-section-number">1.24.3</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-20"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>arinc_word</code></td>
+<td><code>unsigned int</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>*result</code></td>
+<td><code>unsigned int</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>parity</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="return-value-23" class="section level3" number="1.24.4">
+<h3>
+<span class="header-section-number">1.24.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-23"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td></td>
+<td></td>
+</tr></tbody>
+</table></div>
+</div>
+<div id="example-23" class="section level3" number="1.24.5">
+<h3>
+<span class="header-section-number">1.24.5</span> Example<a class="anchor" aria-label="anchor" href="#example-23"><i class="fas fa-link"></i></a>
+</h3>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="empty"></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <div id="book-on-this-page"></div>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-16.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

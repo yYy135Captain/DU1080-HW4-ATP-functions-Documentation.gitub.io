@@ -44,7 +44,23 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">SerialUART</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Instruments</li>
+<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
+<li><a class="" href="chroma2238.html">Chroma2238</a></li>
+<li><a class="" href="daq.html">DAQ</a></li>
+<li><a class="" href="dmm.html">DMM</a></li>
+<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
+<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
+<li><a class="" href="mux.html">MUX</a></li>
+<li><a class="" href="mxfoundation.html">MxFoundation</a></li>
+<li><a class="" href="photometer.html">Photometer</a></li>
+<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
+<li><a class="" href="powersupply.html">PowerSupply</a></li>
+<li><a class="" href="relay.html">Relay</a></li>
+<li><a class="active" href="serialuart.html">SerialUART</a></li>
+</ul>
 
         <div class="book-extra">
           
@@ -78,6 +94,36 @@
 <div id="parameters-10" class="section level3" number="1.12.3">
 <h3>
 <span class="header-section-number">1.12.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-10"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="return-value-11" class="section level3" number="1.12.4">
+<h3>
+<span class="header-section-number">1.12.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-11"><i class="fas fa-link"></i></a>
+</h3>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Error</th>
+<th>Error code</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>no errors and initialization was a success</td>
+</tr>
+<tr class="even">
+<td><code>-1</code></td>
+<td>VISA cannot open resource handle manager</td>
+</tr>
+<tr class="odd">
+<td><code>-2</code></td>
+<td>VISA cannot open port associated with resource handle</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="example-11" class="section level3" number="1.12.5">
+<h3>
+<span class="header-section-number">1.12.5</span> Example<a class="anchor" aria-label="anchor" href="#example-11"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -114,36 +160,6 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-11" class="section level3" number="1.12.4">
-<h3>
-<span class="header-section-number">1.12.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-11"><i class="fas fa-link"></i></a>
-</h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error Code</th>
-<th>Error</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>0</code></td>
-<td>Success</td>
-</tr>
-<tr class="even">
-<td><code>-1</code></td>
-<td>VISA cannot open resource handle manager</td>
-</tr>
-<tr class="odd">
-<td><code>-2</code></td>
-<td>VISA cannot open port</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div id="example-11" class="section level3" number="1.12.5">
-<h3>
-<span class="header-section-number">1.12.5</span> Example<a class="anchor" aria-label="anchor" href="#example-11"><i class="fas fa-link"></i></a>
-</h3>
-</div>
 </div>
 <div id="uartsetting" class="section level2" number="1.13">
 <h2>
@@ -153,68 +169,21 @@
 <h3>
 <span class="header-section-number">1.13.1</span> Header<a class="anchor" aria-label="anchor" href="#header-12"><i class="fas fa-link"></i></a>
 </h3>
-<pre><code>int DLLEXPORT __stdcall UARTSetting(ViSession *session_handle, ViUInt32 baud_rate, char *status_message)</code></pre>
 </div>
 <div id="purpose-12" class="section level3" number="1.13.2">
 <h3>
 <span class="header-section-number">1.13.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-12"><i class="fas fa-link"></i></a>
 </h3>
-<p>Sets serial port of a VISA session handle</p>
 </div>
 <div id="parameters-11" class="section level3" number="1.13.3">
 <h3>
 <span class="header-section-number">1.13.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-11"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<colgroup>
-<col width="26%">
-<col width="20%">
-<col width="53%">
-</colgroup>
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>session_handle</code></td>
-<td>ViSession *</td>
-<td>unique session handle</td>
-</tr>
-<tr class="even">
-<td><code>baud_rate</code></td>
-<td>ViUInt32</td>
-<td>baud rate transmission</td>
-</tr>
-<tr class="odd">
-<td><code>status_message</code></td>
-<td>char *</td>
-<td>status of serial port configuration</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-12" class="section level3" number="1.13.4">
 <h3>
 <span class="header-section-number">1.13.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-12"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Error Code</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>0</code></td>
-<td>Success</td>
-</tr>
-<tr class="even">
-<td><code>-1</code></td>
-<td>Serial port setting failed</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-12" class="section level3" number="1.13.5">
 <h3>
@@ -230,58 +199,21 @@
 <h3>
 <span class="header-section-number">1.14.1</span> Header<a class="anchor" aria-label="anchor" href="#header-13"><i class="fas fa-link"></i></a>
 </h3>
-<pre><code>int DLLEXPORT __stdcall ReadUART(ViSession *session_handle, char *status_message)</code></pre>
 </div>
 <div id="purpose-13" class="section level3" number="1.14.2">
 <h3>
 <span class="header-section-number">1.14.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-13"><i class="fas fa-link"></i></a>
 </h3>
-<p>Read UART data from session handle</p>
 </div>
 <div id="parameters-12" class="section level3" number="1.14.3">
 <h3>
 <span class="header-section-number">1.14.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-12"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>session_handle</code></td>
-<td>ViSession *</td>
-<td>unique session handle</td>
-</tr>
-<tr class="even">
-<td><code>status_message</code></td>
-<td>char *</td>
-<td>VISA read status</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-13" class="section level3" number="1.14.4">
 <h3>
 <span class="header-section-number">1.14.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-13"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Error Code</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>0</code></td>
-<td>Success</td>
-</tr>
-<tr class="even">
-<td><code>-1</code></td>
-<td>VISA read fail</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-13" class="section level3" number="1.14.5">
 <h3>
@@ -297,73 +229,21 @@
 <h3>
 <span class="header-section-number">1.15.1</span> Header<a class="anchor" aria-label="anchor" href="#header-14"><i class="fas fa-link"></i></a>
 </h3>
-<pre><code>int DLLEXPORT __stdcall ReplyUART(ViSession *session_handle, char *status_message, int time_out, int number_bytes)</code></pre>
 </div>
 <div id="purpose-14" class="section level3" number="1.15.2">
 <h3>
 <span class="header-section-number">1.15.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-14"><i class="fas fa-link"></i></a>
 </h3>
-<p>Read/write data until the amount is equal to number_bytes</p>
 </div>
 <div id="parameters-13" class="section level3" number="1.15.3">
 <h3>
 <span class="header-section-number">1.15.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-13"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<colgroup>
-<col width="33%">
-<col width="33%">
-<col width="33%">
-</colgroup>
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>session_handle</code></td>
-<td>ViSession *</td>
-<td>unique session handle</td>
-</tr>
-<tr class="even">
-<td><code>status_message</code></td>
-<td>char *</td>
-<td>status of VISA</td>
-</tr>
-<tr class="odd">
-<td><code>time_out</code></td>
-<td>int</td>
-<td>amount of time (in seconds) the program waits for a return value before breaking out</td>
-</tr>
-<tr class="even">
-<td><code>number_bytes</code></td>
-<td>int</td>
-<td>total number of bytes to read</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-14" class="section level3" number="1.15.4">
 <h3>
 <span class="header-section-number">1.15.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-14"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Error Code</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>0</code></td>
-<td>Success</td>
-</tr>
-<tr class="even">
-<td><code>-1</code></td>
-<td>VISA write failed</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-14" class="section level3" number="1.15.5">
 <h3>
@@ -379,45 +259,21 @@
 <h3>
 <span class="header-section-number">1.16.1</span> Header<a class="anchor" aria-label="anchor" href="#header-15"><i class="fas fa-link"></i></a>
 </h3>
-<pre><code>int DLLEXPORT __stdcall CloseUART(ViSession *session_handle)</code></pre>
 </div>
 <div id="purpose-15" class="section level3" number="1.16.2">
 <h3>
 <span class="header-section-number">1.16.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-15"><i class="fas fa-link"></i></a>
 </h3>
-<p>Close UART through session handle</p>
 </div>
 <div id="parameters-14" class="section level3" number="1.16.3">
 <h3>
 <span class="header-section-number">1.16.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-14"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody><tr class="odd">
-<td><code>session_handle</code></td>
-<td>ViSession *</td>
-<td>unique session handle</td>
-</tr></tbody>
-</table></div>
 </div>
 <div id="return-value-15" class="section level3" number="1.16.4">
 <h3>
 <span class="header-section-number">1.16.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-15"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Error Code</th>
-</tr></thead>
-<tbody><tr class="odd">
-<td><code>0</code></td>
-<td>Success</td>
-</tr></tbody>
-</table></div>
 </div>
 <div id="example-15" class="section level3" number="1.16.5">
 <h3>
@@ -433,87 +289,21 @@
 <h3>
 <span class="header-section-number">1.17.1</span> Header<a class="anchor" aria-label="anchor" href="#header-16"><i class="fas fa-link"></i></a>
 </h3>
-<pre><code>int DLLEXPORT __stdcall SerialVISAInit(const char *port_name, int baud_rate, int data_bits, int parity, int stop_bits, int flow_control, int time_out)</code></pre>
 </div>
 <div id="purpose-16" class="section level3" number="1.17.2">
 <h3>
 <span class="header-section-number">1.17.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-16"><i class="fas fa-link"></i></a>
 </h3>
-<p>RS-232 and RS-422 send and read verification</p>
 </div>
 <div id="parameters-15" class="section level3" number="1.17.3">
 <h3>
 <span class="header-section-number">1.17.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-15"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>port_name</code></td>
-<td>char *</td>
-<td>port name</td>
-</tr>
-<tr class="even">
-<td><code>baud_rate</code></td>
-<td>int</td>
-<td>rate of byte transmission</td>
-</tr>
-<tr class="odd">
-<td><code>data_bits</code></td>
-<td>int</td>
-<td>data bits</td>
-</tr>
-<tr class="even">
-<td><code>parity</code></td>
-<td>int</td>
-<td>parity</td>
-</tr>
-<tr class="odd">
-<td><code>stop_bits</code></td>
-<td>int</td>
-<td>stop bits</td>
-</tr>
-<tr class="even">
-<td><code>flow_control</code></td>
-<td>int</td>
-<td>flow control</td>
-</tr>
-<tr class="odd">
-<td><code>time_out</code></td>
-<td>int</td>
-<td>time out in seconds</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-16" class="section level3" number="1.17.4">
 <h3>
 <span class="header-section-number">1.17.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-16"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Error Code</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>0</code></td>
-<td>Success</td>
-</tr>
-<tr class="even">
-<td><code>-1</code></td>
-<td>Could not open VISA resource_handle manager</td>
-</tr>
-<tr class="odd">
-<td><code>-2</code></td>
-<td>Could not open VISA port</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-16" class="section level3" number="1.17.5">
 <h3>
@@ -529,55 +319,21 @@
 <h3>
 <span class="header-section-number">1.18.1</span> Header<a class="anchor" aria-label="anchor" href="#header-17"><i class="fas fa-link"></i></a>
 </h3>
-<pre><code>int DLLEXPORT __stdcall SerialVISAWrite(const char *test_data)</code></pre>
 </div>
 <div id="purpose-17" class="section level3" number="1.18.2">
 <h3>
 <span class="header-section-number">1.18.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-17"><i class="fas fa-link"></i></a>
 </h3>
-<p>Write test_data into serial port</p>
 </div>
 <div id="parameters-16" class="section level3" number="1.18.3">
 <h3>
 <span class="header-section-number">1.18.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-16"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody><tr class="odd">
-<td><code>test_data</code></td>
-<td>const char *</td>
-<td>Data to be written</td>
-</tr></tbody>
-</table></div>
 </div>
 <div id="return-value-17" class="section level3" number="1.18.4">
 <h3>
 <span class="header-section-number">1.18.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-17"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Error Code</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>0</code></td>
-<td>Success</td>
-</tr>
-<tr class="even">
-<td><code>-1</code></td>
-<td>RS 232 is not initialized</td>
-</tr>
-<tr class="odd">
-<td><code>-3</code></td>
-<td>If test_data was not written to the serial properly</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-17" class="section level3" number="1.18.5">
 <h3>
@@ -593,72 +349,21 @@
 <h3>
 <span class="header-section-number">1.19.1</span> Header<a class="anchor" aria-label="anchor" href="#header-18"><i class="fas fa-link"></i></a>
 </h3>
-<pre><code>int DLLEXPORT __stdcall SerialVISARead(char *receive_buffer, int buffer_size, int *bytes_received)</code></pre>
 </div>
 <div id="purpose-18" class="section level3" number="1.19.2">
 <h3>
 <span class="header-section-number">1.19.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-18"><i class="fas fa-link"></i></a>
 </h3>
-<p>Read from receive_buffer</p>
 </div>
 <div id="parameters-17" class="section level3" number="1.19.3">
 <h3>
 <span class="header-section-number">1.19.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-17"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<colgroup>
-<col width="33%">
-<col width="33%">
-<col width="33%">
-</colgroup>
-<thead><tr class="header">
-<th>Parameter</th>
-<th>Type</th>
-<th>Purpose</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>receive_buffer</code></td>
-<td>char *</td>
-<td>Buffer to receive</td>
-</tr>
-<tr class="even">
-<td><code>buffer_size</code></td>
-<td>int</td>
-<td>Size of buffer</td>
-</tr>
-<tr class="odd">
-<td><code>bytes_received</code></td>
-<td>int *</td>
-<td>How many bytes actually received by receive_buffer</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="return-value-18" class="section level3" number="1.19.4">
 <h3>
 <span class="header-section-number">1.19.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-18"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error</th>
-<th>Error Code</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>0</code></td>
-<td>Success</td>
-</tr>
-<tr class="even">
-<td><code>-1</code></td>
-<td>Rs232 did not initialize</td>
-</tr>
-<tr class="odd">
-<td><code>-2</code></td>
-<td>Chceks if the parameters have an invalid value</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-18" class="section level3" number="1.19.5">
 <h3>
@@ -674,44 +379,21 @@
 <h3>
 <span class="header-section-number">1.20.1</span> Header<a class="anchor" aria-label="anchor" href="#header-19"><i class="fas fa-link"></i></a>
 </h3>
-<pre><code>int DLLEXPORT __stdcall SerialVISACleanup(void)</code></pre>
 </div>
 <div id="purpose-19" class="section level3" number="1.20.2">
 <h3>
 <span class="header-section-number">1.20.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-19"><i class="fas fa-link"></i></a>
 </h3>
-<p>Restart VISA serial port</p>
 </div>
 <div id="parameters-18" class="section level3" number="1.20.3">
 <h3>
 <span class="header-section-number">1.20.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-18"><i class="fas fa-link"></i></a>
 </h3>
-<p>Void</p>
 </div>
 <div id="return-value-19" class="section level3" number="1.20.4">
 <h3>
 <span class="header-section-number">1.20.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-19"><i class="fas fa-link"></i></a>
 </h3>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th>Error Code</th>
-<th>Error</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>0</code></td>
-<td>Success</td>
-</tr>
-<tr class="even">
-<td><code>-1</code></td>
-<td>RS232 port did not initialize</td>
-</tr>
-<tr class="odd">
-<td><code>-2</code></td>
-<td>RS232 resource manager did not initialize</td>
-</tr>
-</tbody>
-</table></div>
 </div>
 <div id="example-19" class="section level3" number="1.20.5">
 <h3>
@@ -722,11 +404,95 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
+<div class="prev"><a href="relay.html">Relay</a></div>
 <div class="empty"></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#serialuart">SerialUART</a></li>
+<li><a class="nav-link" href="#overview-1">Overview</a></li>
+<li>
+<a class="nav-link" href="#initializeuart"><span class="header-section-number">1.12</span> InitializeUART</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-11"><span class="header-section-number">1.12.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-11"><span class="header-section-number">1.12.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-10"><span class="header-section-number">1.12.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-11"><span class="header-section-number">1.12.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-11"><span class="header-section-number">1.12.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#uartsetting"><span class="header-section-number">1.13</span> UARTSetting</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-12"><span class="header-section-number">1.13.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-12"><span class="header-section-number">1.13.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-11"><span class="header-section-number">1.13.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-12"><span class="header-section-number">1.13.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-12"><span class="header-section-number">1.13.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#readuart"><span class="header-section-number">1.14</span> ReadUART</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-13"><span class="header-section-number">1.14.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-13"><span class="header-section-number">1.14.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-12"><span class="header-section-number">1.14.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-13"><span class="header-section-number">1.14.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-13"><span class="header-section-number">1.14.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#replyuart"><span class="header-section-number">1.15</span> ReplyUART</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-14"><span class="header-section-number">1.15.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-14"><span class="header-section-number">1.15.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-13"><span class="header-section-number">1.15.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-14"><span class="header-section-number">1.15.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-14"><span class="header-section-number">1.15.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#closeuart"><span class="header-section-number">1.16</span> CloseUART</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-15"><span class="header-section-number">1.16.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-15"><span class="header-section-number">1.16.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-14"><span class="header-section-number">1.16.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-15"><span class="header-section-number">1.16.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-15"><span class="header-section-number">1.16.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#serialvisainit"><span class="header-section-number">1.17</span> SerialVISAInit</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-16"><span class="header-section-number">1.17.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-16"><span class="header-section-number">1.17.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-15"><span class="header-section-number">1.17.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-16"><span class="header-section-number">1.17.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-16"><span class="header-section-number">1.17.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#serialvisawrite"><span class="header-section-number">1.18</span> SerialVISAWrite</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-17"><span class="header-section-number">1.18.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-17"><span class="header-section-number">1.18.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-16"><span class="header-section-number">1.18.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-17"><span class="header-section-number">1.18.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-17"><span class="header-section-number">1.18.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#serialvisaread"><span class="header-section-number">1.19</span> SerialVISARead</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-18"><span class="header-section-number">1.19.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-18"><span class="header-section-number">1.19.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-17"><span class="header-section-number">1.19.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-18"><span class="header-section-number">1.19.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-18"><span class="header-section-number">1.19.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#serialvisacleanup"><span class="header-section-number">1.20</span> SerialVISACleanup</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-19"><span class="header-section-number">1.20.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-19"><span class="header-section-number">1.20.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-18"><span class="header-section-number">1.20.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-19"><span class="header-section-number">1.20.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-19"><span class="header-section-number">1.20.5</span> Example</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">

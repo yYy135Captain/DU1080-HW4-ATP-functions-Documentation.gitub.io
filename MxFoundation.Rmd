@@ -102,66 +102,81 @@ Configures an ARINC 429 transmit channel and sends data using a periodic transmi
 
 ### Parameter
 |           Parameter         |      Type    | Description |
-|-----------------------------|--------------|-------------|
-|` *arinc429_transmit_buffer` | `HMXF_BUFFER`|
-|` *arinc429_schedule_handle` | `HMXF_SCHED `|
-|   ` *transmit_channel`      |   `uint64`   |
-|       ` send_rate`          |     `int`    |
-|           `speed`           |     `BOOL`   |
-|           `parity`          |     `int`    |
-|       `transmit_data`       |`unsigned int`|
-|           `delay`           |`unsigned int`| 
+|-----------------------------|--------------|---------------------------------------|
+|` *arinc429_transmit_buffer` | `HMXF_BUFFER`|   Stores the transmit buffer handle.  |
+|` *arinc429_schedule_handle` | `HMXF_SCHED `|  Stores the periodic schedule handle. |
+|   ` *transmit_channel`      |   `uint64`   |Selects the ARINC 429 transmit channel.|
+|       ` send_rate`          |     `int`    | Sets the periodic transmission rate.  |
+|           `speed`           |     `BOOL`   |      Selects transmit speed.          |
+|           `parity`          |     `int`    |          Selects Parity.              |
+|       `transmit_data`       |`unsigned int`|        Data word to transmit.         |
+|           `delay`           |`unsigned int`| Delay applied after starting transmission.|
 
 ### Return Value
 | Error | Description |
-|--------------|-------------|
-|
+|---------|-------------|
+|   `0`   | Data transmission setup completed successfully.|
+|Non-Zero | An error occurred while configuring or starting transmission.|
 
 ### Example
+No direct call to `Arinc429SendData()`.
 
 ## **Arinc429ReceiveData**
 ### Header
 `int DLLEXPORT __stdcall Arinc429ReceiveData(uint64 count, HMXF_BUFFER receive_buffer, uint32 *received_data);`
 
 ### Purpose
+Reads ARINC 429 records from a receive a acquisition buffer and returns the data word from the first received record.
+
 ### Parameter
 |     Parameter     |     Type    | Description |
 | ------------------|-------------|-------------|
-|   `count`         |   `uint64`  |
-| `receive_buffer`  |`HMXF_BUFFER`|
-|` *received_data`  |   `uint32`  |
+|   `count`         |   `uint64`  | Number of ARINC 429 records for which host-buffer space is allocated.|
+| `receive_buffer`  |`HMXF_BUFFER`| Handle of the receive acquisition buffer to read. |
+|` *received_data`  |   `uint32`  | Pointer that receives the data word from the first ARINC 429 record.|
 
 ### Return Value
 |     Error    | Description |
 |--------------|-------------|
-|
+|     `0`      | The receive-buffer read completed successfully.|
+|   Non-Zero   | Memory allocation or an ARINC 429 receive operation failed.|
 
 ### Example
+```c
+uint32 received_data = 0;
+HMXF_BUFFER receive_buffer = 0;
+arinc429_error = Arinc429SetupReceiveData(receive_channel, 0, 0, 1, &receive_buffer);
+```
 
 ## **Arinc429FreeBuffers**
 ### Header
 `void DLLEXPORT __stdcall Arinc429FreeBuffers(HMXF_BUFFER arinc429_transmit_buffer, HMXF_BUFFER arinc429_receive_buffer, HMXF_SCHED arinc429_schedule_handle);`
 
 ### Purpose
+Releases the ARINC 429 periodic transmission schedule and transmit buffer. It also stops and closes the receive acquisition buffer.
+
 ### Parameter
 |        Parameter         |     Type    | Description |
 |--------------------------|-------------|-------------|
-|`arinc429_transmit_buffer`|`HMXF_BUFFER`|
-|`arinc429_receive_buffer` |`HMXF_BUFFER`|
-|`arinc429_schedule_handle`|`HMXF_SCHED` |
+|`arinc429_transmit_buffer`|`HMXF_BUFFER`| Handle of the periodic transmit buffer to release.|
+|`arinc429_receive_buffer` |`HMXF_BUFFER`| Handle of the receive acquisition buffer to stop and close. |
+|`arinc429_schedule_handle`|`HMXF_SCHED` | Handle of the periodic transmission schedule to release. |
 
 ### Return Value
-| Error | Description |
-|--------------|-------------|
-|
+This function does not return a value.
 
 ### Example
+```c
+Arinc429FreeBuffers(transmit_buffer, receive_buffer, schedule_buffer);
+```
 
 ## **Arinc429SelfTest**
 ### Header
 `int DLLEXPORT __stdcall Arinc429SelfTest(uint64 transmit_channel, uint64 receive_channel, unsigned int data);`
 
 ### Purpose
+Performs an ARINC 429 loopback self-test by transmitting a data word, receiving it on the specified channel, and releasing the allocated communication resources.
+
 ### Parameter
 |     Parameter     |      Type    | Description |
 |-------------------|--------------|-------------|
@@ -185,54 +200,68 @@ Configures an ARINC 429 transmit channel and sends data using a periodic transmi
 `int DLLEXPORT __stdcall ARINC708ChannelInitialize(void);`
 
 ### Purpose
+Initializes the ARINC 708 modules and retrieves the transmit and receive handles required for ARINC 708 communication.
+
 ### Parameter
-|     Parameter     |     Type    | Description |
-| ------------------|-------------|-------------|
-|
+This function has no parameters.
 
 ### Return Value
 | Error | Description |
 |--------------|-------------|
-|
+|     `0`      | ARINC 708 modules and channels were initialized successfully. |
+|   Non-Zero   | An ARINC 708 module or channel initialization operation failed. |
 
 ### Example
+```c
+error = ARINC708ChannelInitialize();
+```
 
 ## **Arinc708SetupReceiveData**
 ### Header
 `int DLLEXPORT __stdcall Arinc708SetupReceiveData(uint64 receive_channel, HMXF_BUFFER *receive_buffer);`
 
 ### Purpose
+Configures and ARINC 708 receive channel by allocating a receive acquisition buffer and starting the receive acquisition process.
+
 ### Parameter
 |     Parameter     |     Type    | Description |
 |-------------------|-------------|-------------|
-|`receive_channel`  | `uint64`    |
-|` *receive_buffer` |`HMXF_BUFFER`
+|`receive_channel`  | `uint64`    | Index of the ARINC 708 receive channel to configure.|
+|` *receive_buffer` |`HMXF_BUFFER`| Pointer that receives the allocated receive buffer handle. |
 
 ### Return Value
 | Error | Description |
 |--------------|-------------|
-|
+|     `0`      | The receive channel was configured successfully. |
+|   Non-Zero   | Failed to allocate or start the receive acquisition buffer. |
 
 ### Example
+```c
+HMXF_BUFFER  receive_buffer = 0;
+arinc708_error = Arinc708SetupReceiveData(receive_channel, &receive_buffer);
+```
 
 ## **Arinc708SendData**
 ### Header
 `int DLLEXPORT __stdcall Arinc708SendData(HMXF_BUFFER *arinc708_transmit_buffer, HMXF_SCHED *arinc708_schedule_handle, uint64 transmit_channel, int send_rate, unsigned int transmit_data);`
 
 ### Purpose
+Configures an ARINC 708 transmit channel, creates a periodic transmission schedule, prepares the transmit records, and states periodic data transmission.
+
 ### Parameter
 |        Parameter           |     Type     | Description |
 |----------------------------|--------------|-------------|
-|` *arinc708_transmit_buffer`| `HMXF_BUFFER`|
-|` *arinc708_schedule_handle`| `HMXF_SCHED` |
-|     `transmit_channel`     |   `uint64`   |
-|       `send_rate`          |     `int`    |
-|     `transmit_data`        |`unsigned int`|
+|` *arinc708_transmit_buffer`| `HMXF_BUFFER`| Pointer that receive the transmit buffer handle.|
+|` *arinc708_schedule_handle`| `HMXF_SCHED` | Pointer the receives the periodic schedule handle.|
+|     `transmit_channel`     |   `uint64`   | Index of the ARINC 708 transmit channel.|
+|       `send_rate`          |     `int`    | Periodic transmission rate.|
+|     `transmit_data`        |`unsigned int`| Data value written into the transmit records.
 
 ### Return Value
 | Error | Description |
 |--------------|-------------|
-|
+|     `0`      | Periodic transmission was configured successfully.|
+|   Non-Zero   | Failed to configure or start the ARINC 708 transmission.|
 
 ### Example
 
@@ -241,17 +270,20 @@ Configures an ARINC 429 transmit channel and sends data using a periodic transmi
 `int DLLEXPORT __stdcall Arinc708ReceiveData(uint64 count, HMXF_BUFFER receive_buffer, uint32 *received_data);`
 
 ### Purpose
+Reads ARINC 708 records from a receive acquisition buffer and returns a data value from the first received record.
+
 ### Parameter
 |     Parameter     |     Type    | Description |
 |-------------------|-------------|-------------|
-|       `count`     |   `uint64`  |
-| `receive_buffer`  |`HMXF_BUFFER`|
-| `*received_data`  |   `uint32`  |
+|       `count`     |   `uint64`  | Number of ARINC 708 records for which host-buffer space is allocated.|
+| `receive_buffer`  |`HMXF_BUFFER`| Handle of the receive acquisition buffer to read.|
+| `*received_data`  |   `uint32`  | Pointer that receives the selected data value from the first ARINC 708 record.|
 
 ### Return Value
 | Error | Description |
 |--------------|-------------|
-|
+|     `0`      | The receive-buffer read completed successfully.|
+|   Non-Zero   | Memory allocation or an ARINC 708 receive operation failed.|
 
 ### Example
 
@@ -260,17 +292,17 @@ Configures an ARINC 429 transmit channel and sends data using a periodic transmi
 `void DLLEXPORT __stdcall Arinc708FreeBuffers(HMXF_BUFFER arinc708_transmit_buffer, HMXF_BUFFER arinc708_receive_buffer, HMXF_SCHED arinc708_schedule_handle);`
 
 ### Purpose
+Releases the ARINC 708 periodic transmission schedule and transmit buffer. It also stops and closes the receive acquisition buffer.
+
 ### Parameter
 |         Parameter        |     Type    | Description |
 |--------------------------|-------------|-------------|
-|`arinc708_transmit_buffer`|`HMXF_BUFFER`|
-|`arinc708_receive_buffer` |`HMXF_BUFFER`|
-|`arinc708_schedule_handle`|`HMXF_SCHED` |
+|`arinc708_transmit_buffer`|`HMXF_BUFFER`| Handle of the periodic transmit buffer to release.|
+|`arinc708_receive_buffer` |`HMXF_BUFFER`| Handle of the receive acquisition buffer to stop and close.|
+|`arinc708_schedule_handle`|`HMXF_SCHED` | Handle of the periodic transmission schedule to release.|
 
 ### Return Value
-| Error | Description |
-|--------------|-------------|
-|
+This function does not return a value.
 
 ### Example
 
@@ -298,15 +330,15 @@ Configures an ARINC 429 transmit channel and sends data using a periodic transmi
 `void Arinc708DisplayDataArray(uint64 record_number, MXF_A708_DATAREC* record);`
 
 ### Purpose
+Displays the contents of one or more ARINC 708 data records for debugging and verification.
 ### Parameter
 |     Parameter     |     Type    | Description |
 |------------------|-------------|-------------|
-|
+| `record_number`  |  `uint64`   | Number of ARINC 708 records to display.|
+|     `rec`        | `MXF_A708_DATAREC *` | Pointer to the first ARINC 708 data record.|
 
 ### Return Value
-| Error | Description |
-|--------------|-------------|
-|
+This function doesn't return a value.
 
 ### Example
 
@@ -319,10 +351,11 @@ Configures an ARINC 429 transmit channel and sends data using a periodic transmi
 `int DLLEXPORT SetParityBit(unsigned int arinc_word, unsigned int *result, int parity);`
 
 ### Purpose
+
 ### Parameter
 |     Parameter     |     Type     | Description |
 | ------------------|--------------|-------------|
-|   `arinc_word`    |`unsigned int`|
+|   `arinc_word`    |`unsigned int`| 
 |     ` *result`    |`unsigned int`|
 |     `parity`      |    `int`     |
 

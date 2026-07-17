@@ -77,19 +77,19 @@
 <p>The Relay library provides functions for controlling NI switch hardware used in the DU1080 HW4 ATP system.</p>
 <p>It supports initialization, relay switching, signal routing, and discuss signal control.</p>
 </div>
-<div id="relayinitialize" class="section level2" number="1.21">
+<div id="relayinitialize" class="section level2" number="1.25">
 <h2>
-<span class="header-section-number">1.21</span> <strong>RelayInitialize</strong><a class="anchor" aria-label="anchor" href="#relayinitialize"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25</span> <strong>RelayInitialize</strong><a class="anchor" aria-label="anchor" href="#relayinitialize"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-20" class="section level3" number="1.21.1">
+<div id="header-24" class="section level3" number="1.25.1">
 <h3>
-<span class="header-section-number">1.21.1</span> Header<a class="anchor" aria-label="anchor" href="#header-20"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25.1</span> Header<a class="anchor" aria-label="anchor" href="#header-24"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelayInitialize(char *resource_name, ViSession *session, ViBoolean *test_result, char *status_message);</code></p>
 </div>
-<div id="parameter-17" class="section level3" number="1.21.2">
+<div id="parameter-21" class="section level3" number="1.25.2">
 <h3>
-<span class="header-section-number">1.21.2</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-17"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25.2</span> Parameter<a class="anchor" aria-label="anchor" href="#parameter-21"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -121,15 +121,15 @@
 </tbody>
 </table></div>
 </div>
-<div id="purpose-20" class="section level3" number="1.21.3">
+<div id="purpose-24" class="section level3" number="1.25.3">
 <h3>
-<span class="header-section-number">1.21.3</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-20"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25.3</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-24"><i class="fas fa-link"></i></a>
 </h3>
 <p>Creates a switch session and initializes the relay module.</p>
 </div>
-<div id="return-value-24" class="section level3" number="1.21.4">
+<div id="return-value-24" class="section level3" number="1.25.4">
 <h3>
-<span class="header-section-number">1.21.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-24"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-24"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -152,31 +152,31 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-24" class="section level3" number="1.21.5">
+<div id="example-24" class="section level3" number="1.25.5">
 <h3>
-<span class="header-section-number">1.21.5</span> Example<a class="anchor" aria-label="anchor" href="#example-24"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.25.5</span> Example<a class="anchor" aria-label="anchor" href="#example-24"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="relayset" class="section level2" number="1.22">
+<div id="relayset" class="section level2" number="1.26">
 <h2>
-<span class="header-section-number">1.22</span> <strong>RelaySet</strong><a class="anchor" aria-label="anchor" href="#relayset"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26</span> <strong>RelaySet</strong><a class="anchor" aria-label="anchor" href="#relayset"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-21" class="section level3" number="1.22.1">
+<div id="header-25" class="section level3" number="1.26.1">
 <h3>
-<span class="header-section-number">1.22.1</span> Header<a class="anchor" aria-label="anchor" href="#header-21"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.1</span> Header<a class="anchor" aria-label="anchor" href="#header-25"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelaySet(ViSession session, char channel[], int operation);</code></p>
 </div>
-<div id="purpose-21" class="section level3" number="1.22.2">
+<div id="purpose-25" class="section level3" number="1.26.2">
 <h3>
-<span class="header-section-number">1.22.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-21"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-25"><i class="fas fa-link"></i></a>
 </h3>
 <p>Changes the state of a specified relay channel.</p>
 </div>
-<div id="parameters-3" class="section level3" number="1.22.3">
+<div id="parameters-3" class="section level3" number="1.26.3">
 <h3>
-<span class="header-section-number">1.22.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-3"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -203,9 +203,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-25" class="section level3" number="1.22.4">
+<div id="return-value-25" class="section level3" number="1.26.4">
 <h3>
-<span class="header-section-number">1.22.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-25"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-25"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -224,31 +224,31 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-25" class="section level3" number="1.22.5">
+<div id="example-25" class="section level3" number="1.26.5">
 <h3>
-<span class="header-section-number">1.22.5</span> Example<a class="anchor" aria-label="anchor" href="#example-25"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.26.5</span> Example<a class="anchor" aria-label="anchor" href="#example-25"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="relayclose" class="section level2" number="1.23">
+<div id="relayclose" class="section level2" number="1.27">
 <h2>
-<span class="header-section-number">1.23</span> <strong>RelayClose</strong><a class="anchor" aria-label="anchor" href="#relayclose"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27</span> <strong>RelayClose</strong><a class="anchor" aria-label="anchor" href="#relayclose"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-22" class="section level3" number="1.23.1">
+<div id="header-26" class="section level3" number="1.27.1">
 <h3>
-<span class="header-section-number">1.23.1</span> Header<a class="anchor" aria-label="anchor" href="#header-22"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.1</span> Header<a class="anchor" aria-label="anchor" href="#header-26"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelayClose(ViSession session, char *status_message);</code></p>
 </div>
-<div id="purpose-22" class="section level3" number="1.23.2">
+<div id="purpose-26" class="section level3" number="1.27.2">
 <h3>
-<span class="header-section-number">1.23.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-22"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-26"><i class="fas fa-link"></i></a>
 </h3>
 <p>Resets the switch module and closes the active session.</p>
 </div>
-<div id="parameters-4" class="section level3" number="1.23.3">
+<div id="parameters-4" class="section level3" number="1.27.3">
 <h3>
-<span class="header-section-number">1.23.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-4"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-4"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -275,9 +275,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-26" class="section level3" number="1.23.4">
+<div id="return-value-26" class="section level3" number="1.27.4">
 <h3>
-<span class="header-section-number">1.23.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-26"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-26"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -296,31 +296,31 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-26" class="section level3" number="1.23.5">
+<div id="example-26" class="section level3" number="1.27.5">
 <h3>
-<span class="header-section-number">1.23.5</span> Example<a class="anchor" aria-label="anchor" href="#example-26"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.27.5</span> Example<a class="anchor" aria-label="anchor" href="#example-26"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="replayopenall" class="section level2" number="1.24">
+<div id="replayopenall" class="section level2" number="1.28">
 <h2>
-<span class="header-section-number">1.24</span> <strong>ReplayOpenAll</strong><a class="anchor" aria-label="anchor" href="#replayopenall"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28</span> <strong>ReplayOpenAll</strong><a class="anchor" aria-label="anchor" href="#replayopenall"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-23" class="section level3" number="1.24.1">
+<div id="header-27" class="section level3" number="1.28.1">
 <h3>
-<span class="header-section-number">1.24.1</span> Header<a class="anchor" aria-label="anchor" href="#header-23"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.1</span> Header<a class="anchor" aria-label="anchor" href="#header-27"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelayOpenAll(ViSession session);</code></p>
 </div>
-<div id="purpose-23" class="section level3" number="1.24.2">
+<div id="purpose-27" class="section level3" number="1.28.2">
 <h3>
-<span class="header-section-number">1.24.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-23"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-27"><i class="fas fa-link"></i></a>
 </h3>
 <p>Disconnects all relay paths on the active switch module.</p>
 </div>
-<div id="parameters-5" class="section level3" number="1.24.3">
+<div id="parameters-5" class="section level3" number="1.28.3">
 <h3>
-<span class="header-section-number">1.24.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-5"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -335,9 +335,9 @@
 </tr></tbody>
 </table></div>
 </div>
-<div id="return-value-27" class="section level3" number="1.24.4">
+<div id="return-value-27" class="section level3" number="1.28.4">
 <h3>
-<span class="header-section-number">1.24.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-27"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-27"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -356,31 +356,31 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-27" class="section level3" number="1.24.5">
+<div id="example-27" class="section level3" number="1.28.5">
 <h3>
-<span class="header-section-number">1.24.5</span> Example<a class="anchor" aria-label="anchor" href="#example-27"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.28.5</span> Example<a class="anchor" aria-label="anchor" href="#example-27"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="relaysignalset" class="section level2" number="1.25">
+<div id="relaysignalset" class="section level2" number="1.29">
 <h2>
-<span class="header-section-number">1.25</span> <strong>RelaySignalSet</strong><a class="anchor" aria-label="anchor" href="#relaysignalset"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29</span> <strong>RelaySignalSet</strong><a class="anchor" aria-label="anchor" href="#relaysignalset"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-24" class="section level3" number="1.25.1">
+<div id="header-28" class="section level3" number="1.29.1">
 <h3>
-<span class="header-section-number">1.25.1</span> Header<a class="anchor" aria-label="anchor" href="#header-24"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.1</span> Header<a class="anchor" aria-label="anchor" href="#header-28"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT _stdcall RelaySignalSet(ViSession session, char *signal_name, void **signal_list, char *status_message);</code></p>
 </div>
-<div id="purpose-24" class="section level3" number="1.25.2">
+<div id="purpose-28" class="section level3" number="1.29.2">
 <h3>
-<span class="header-section-number">1.25.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-24"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-28"><i class="fas fa-link"></i></a>
 </h3>
 <p>Set the relay state for a specified signal in the signal list.</p>
 </div>
-<div id="parameters-6" class="section level3" number="1.25.3">
+<div id="parameters-6" class="section level3" number="1.29.3">
 <h3>
-<span class="header-section-number">1.25.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-6"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-6"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -412,9 +412,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-28" class="section level3" number="1.25.4">
+<div id="return-value-28" class="section level3" number="1.29.4">
 <h3>
-<span class="header-section-number">1.25.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-28"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-28"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -441,31 +441,31 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-28" class="section level3" number="1.25.5">
+<div id="example-28" class="section level3" number="1.29.5">
 <h3>
-<span class="header-section-number">1.25.5</span> Example<a class="anchor" aria-label="anchor" href="#example-28"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.29.5</span> Example<a class="anchor" aria-label="anchor" href="#example-28"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="setnicdiscrete" class="section level2" number="1.26">
+<div id="setnicdiscrete" class="section level2" number="1.30">
 <h2>
-<span class="header-section-number">1.26</span> <strong>SetNICDiscrete</strong><a class="anchor" aria-label="anchor" href="#setnicdiscrete"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30</span> <strong>SetNICDiscrete</strong><a class="anchor" aria-label="anchor" href="#setnicdiscrete"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-25" class="section level3" number="1.26.1">
+<div id="header-29" class="section level3" number="1.30.1">
 <h3>
-<span class="header-section-number">1.26.1</span> Header<a class="anchor" aria-label="anchor" href="#header-25"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.1</span> Header<a class="anchor" aria-label="anchor" href="#header-29"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall SetNICDiscrete(ViSession *session, ViBoolean *test_result, char *status_message);</code></p>
 </div>
-<div id="purpose-25" class="section level3" number="1.26.2">
+<div id="purpose-29" class="section level3" number="1.30.2">
 <h3>
-<span class="header-section-number">1.26.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-25"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-29"><i class="fas fa-link"></i></a>
 </h3>
 <p>Configures relay settings for NIC ID.</p>
 </div>
-<div id="parameters-7" class="section level3" number="1.26.3">
+<div id="parameters-7" class="section level3" number="1.30.3">
 <h3>
-<span class="header-section-number">1.26.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-7"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-7"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -492,9 +492,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-29" class="section level3" number="1.26.4">
+<div id="return-value-29" class="section level3" number="1.30.4">
 <h3>
-<span class="header-section-number">1.26.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-29"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-29"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -513,31 +513,31 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-29" class="section level3" number="1.26.5">
+<div id="example-29" class="section level3" number="1.30.5">
 <h3>
-<span class="header-section-number">1.26.5</span> Example<a class="anchor" aria-label="anchor" href="#example-29"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.30.5</span> Example<a class="anchor" aria-label="anchor" href="#example-29"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="setnicdiscretebydata" class="section level2" number="1.27">
+<div id="setnicdiscretebydata" class="section level2" number="1.31">
 <h2>
-<span class="header-section-number">1.27</span> <strong>SetNICDiscreteByData</strong><a class="anchor" aria-label="anchor" href="#setnicdiscretebydata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31</span> <strong>SetNICDiscreteByData</strong><a class="anchor" aria-label="anchor" href="#setnicdiscretebydata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-26" class="section level3" number="1.27.1">
+<div id="header-30" class="section level3" number="1.31.1">
 <h3>
-<span class="header-section-number">1.27.1</span> Header<a class="anchor" aria-label="anchor" href="#header-26"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.1</span> Header<a class="anchor" aria-label="anchor" href="#header-30"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall SetNICDiscreteByData(ViSession *session, uint8_t data, void **signal_list, char *status_message);</code></p>
 </div>
-<div id="purpose-26" class="section level3" number="1.27.2">
+<div id="purpose-30" class="section level3" number="1.31.2">
 <h3>
-<span class="header-section-number">1.27.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-26"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-30"><i class="fas fa-link"></i></a>
 </h3>
 <p>Sets the NIC discrete signals based on the input data.</p>
 </div>
-<div id="parameters-8" class="section level3" number="1.27.3">
+<div id="parameters-8" class="section level3" number="1.31.3">
 <h3>
-<span class="header-section-number">1.27.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-8"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-8"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -569,9 +569,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-30" class="section level3" number="1.27.4">
+<div id="return-value-30" class="section level3" number="1.31.4">
 <h3>
-<span class="header-section-number">1.27.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-30"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-30"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -590,31 +590,31 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-30" class="section level3" number="1.27.5">
+<div id="example-30" class="section level3" number="1.31.5">
 <h3>
-<span class="header-section-number">1.27.5</span> Example<a class="anchor" aria-label="anchor" href="#example-30"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.31.5</span> Example<a class="anchor" aria-label="anchor" href="#example-30"><i class="fas fa-link"></i></a>
 </h3>
 </div>
 </div>
-<div id="setprocdiscretebydata" class="section level2" number="1.28">
+<div id="setprocdiscretebydata" class="section level2" number="1.32">
 <h2>
-<span class="header-section-number">1.28</span> <strong>SetProcDiscreteByData</strong><a class="anchor" aria-label="anchor" href="#setprocdiscretebydata"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32</span> <strong>SetProcDiscreteByData</strong><a class="anchor" aria-label="anchor" href="#setprocdiscretebydata"><i class="fas fa-link"></i></a>
 </h2>
-<div id="header-27" class="section level3" number="1.28.1">
+<div id="header-31" class="section level3" number="1.32.1">
 <h3>
-<span class="header-section-number">1.28.1</span> Header<a class="anchor" aria-label="anchor" href="#header-27"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32.1</span> Header<a class="anchor" aria-label="anchor" href="#header-31"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>int DLLEXPORT __stdcall SetProcDiscreteByData(ViSession *session, uint32_t data, void **signal_list, char *status_message);</code></p>
 </div>
-<div id="purpose-27" class="section level3" number="1.28.2">
+<div id="purpose-31" class="section level3" number="1.32.2">
 <h3>
-<span class="header-section-number">1.28.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-27"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32.2</span> Purpose<a class="anchor" aria-label="anchor" href="#purpose-31"><i class="fas fa-link"></i></a>
 </h3>
 <p>Configures PROC discrete signals using the input data.</p>
 </div>
-<div id="parameters-9" class="section level3" number="1.28.3">
+<div id="parameters-9" class="section level3" number="1.32.3">
 <h3>
-<span class="header-section-number">1.28.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-9"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32.3</span> Parameters<a class="anchor" aria-label="anchor" href="#parameters-9"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -646,9 +646,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="return-value-31" class="section level3" number="1.28.4">
+<div id="return-value-31" class="section level3" number="1.32.4">
 <h3>
-<span class="header-section-number">1.28.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-31"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32.4</span> Return Value<a class="anchor" aria-label="anchor" href="#return-value-31"><i class="fas fa-link"></i></a>
 </h3>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -667,9 +667,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="example-31" class="section level3" number="1.28.5">
+<div id="example-31" class="section level3" number="1.32.5">
 <h3>
-<span class="header-section-number">1.28.5</span> Example<a class="anchor" aria-label="anchor" href="#example-31"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.32.5</span> Example<a class="anchor" aria-label="anchor" href="#example-31"><i class="fas fa-link"></i></a>
 </h3>
 
 </div>
@@ -684,75 +684,75 @@
 <li><a class="nav-link" href="#relay">Relay</a></li>
 <li><a class="nav-link" href="#overview-3">Overview</a></li>
 <li>
-<a class="nav-link" href="#relayinitialize"><span class="header-section-number">1.21</span> RelayInitialize</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-20"><span class="header-section-number">1.21.1</span> Header</a></li>
-<li><a class="nav-link" href="#parameter-17"><span class="header-section-number">1.21.2</span> Parameter</a></li>
-<li><a class="nav-link" href="#purpose-20"><span class="header-section-number">1.21.3</span> Purpose</a></li>
-<li><a class="nav-link" href="#return-value-24"><span class="header-section-number">1.21.4</span> Return Value</a></li>
-<li><a class="nav-link" href="#example-24"><span class="header-section-number">1.21.5</span> Example</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#relayset"><span class="header-section-number">1.22</span> RelaySet</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-21"><span class="header-section-number">1.22.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-21"><span class="header-section-number">1.22.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-3"><span class="header-section-number">1.22.3</span> Parameters</a></li>
-<li><a class="nav-link" href="#return-value-25"><span class="header-section-number">1.22.4</span> Return Value</a></li>
-<li><a class="nav-link" href="#example-25"><span class="header-section-number">1.22.5</span> Example</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#relayclose"><span class="header-section-number">1.23</span> RelayClose</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-22"><span class="header-section-number">1.23.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-22"><span class="header-section-number">1.23.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-4"><span class="header-section-number">1.23.3</span> Parameters</a></li>
-<li><a class="nav-link" href="#return-value-26"><span class="header-section-number">1.23.4</span> Return Value</a></li>
-<li><a class="nav-link" href="#example-26"><span class="header-section-number">1.23.5</span> Example</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#replayopenall"><span class="header-section-number">1.24</span> ReplayOpenAll</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#header-23"><span class="header-section-number">1.24.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-23"><span class="header-section-number">1.24.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-5"><span class="header-section-number">1.24.3</span> Parameters</a></li>
-<li><a class="nav-link" href="#return-value-27"><span class="header-section-number">1.24.4</span> Return Value</a></li>
-<li><a class="nav-link" href="#example-27"><span class="header-section-number">1.24.5</span> Example</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#relaysignalset"><span class="header-section-number">1.25</span> RelaySignalSet</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#relayinitialize"><span class="header-section-number">1.25</span> RelayInitialize</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-24"><span class="header-section-number">1.25.1</span> Header</a></li>
-<li><a class="nav-link" href="#purpose-24"><span class="header-section-number">1.25.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-6"><span class="header-section-number">1.25.3</span> Parameters</a></li>
-<li><a class="nav-link" href="#return-value-28"><span class="header-section-number">1.25.4</span> Return Value</a></li>
-<li><a class="nav-link" href="#example-28"><span class="header-section-number">1.25.5</span> Example</a></li>
+<li><a class="nav-link" href="#parameter-21"><span class="header-section-number">1.25.2</span> Parameter</a></li>
+<li><a class="nav-link" href="#purpose-24"><span class="header-section-number">1.25.3</span> Purpose</a></li>
+<li><a class="nav-link" href="#return-value-24"><span class="header-section-number">1.25.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-24"><span class="header-section-number">1.25.5</span> Example</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#setnicdiscrete"><span class="header-section-number">1.26</span> SetNICDiscrete</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#relayset"><span class="header-section-number">1.26</span> RelaySet</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-25"><span class="header-section-number">1.26.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-25"><span class="header-section-number">1.26.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-7"><span class="header-section-number">1.26.3</span> Parameters</a></li>
-<li><a class="nav-link" href="#return-value-29"><span class="header-section-number">1.26.4</span> Return Value</a></li>
-<li><a class="nav-link" href="#example-29"><span class="header-section-number">1.26.5</span> Example</a></li>
+<li><a class="nav-link" href="#parameters-3"><span class="header-section-number">1.26.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-25"><span class="header-section-number">1.26.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-25"><span class="header-section-number">1.26.5</span> Example</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#setnicdiscretebydata"><span class="header-section-number">1.27</span> SetNICDiscreteByData</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#relayclose"><span class="header-section-number">1.27</span> RelayClose</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-26"><span class="header-section-number">1.27.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-26"><span class="header-section-number">1.27.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-8"><span class="header-section-number">1.27.3</span> Parameters</a></li>
-<li><a class="nav-link" href="#return-value-30"><span class="header-section-number">1.27.4</span> Return Value</a></li>
-<li><a class="nav-link" href="#example-30"><span class="header-section-number">1.27.5</span> Example</a></li>
+<li><a class="nav-link" href="#parameters-4"><span class="header-section-number">1.27.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-26"><span class="header-section-number">1.27.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-26"><span class="header-section-number">1.27.5</span> Example</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#setprocdiscretebydata"><span class="header-section-number">1.28</span> SetProcDiscreteByData</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#replayopenall"><span class="header-section-number">1.28</span> ReplayOpenAll</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#header-27"><span class="header-section-number">1.28.1</span> Header</a></li>
 <li><a class="nav-link" href="#purpose-27"><span class="header-section-number">1.28.2</span> Purpose</a></li>
-<li><a class="nav-link" href="#parameters-9"><span class="header-section-number">1.28.3</span> Parameters</a></li>
-<li><a class="nav-link" href="#return-value-31"><span class="header-section-number">1.28.4</span> Return Value</a></li>
-<li><a class="nav-link" href="#example-31"><span class="header-section-number">1.28.5</span> Example</a></li>
+<li><a class="nav-link" href="#parameters-5"><span class="header-section-number">1.28.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-27"><span class="header-section-number">1.28.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-27"><span class="header-section-number">1.28.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#relaysignalset"><span class="header-section-number">1.29</span> RelaySignalSet</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-28"><span class="header-section-number">1.29.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-28"><span class="header-section-number">1.29.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-6"><span class="header-section-number">1.29.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-28"><span class="header-section-number">1.29.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-28"><span class="header-section-number">1.29.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setnicdiscrete"><span class="header-section-number">1.30</span> SetNICDiscrete</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-29"><span class="header-section-number">1.30.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-29"><span class="header-section-number">1.30.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-7"><span class="header-section-number">1.30.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-29"><span class="header-section-number">1.30.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-29"><span class="header-section-number">1.30.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setnicdiscretebydata"><span class="header-section-number">1.31</span> SetNICDiscreteByData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-30"><span class="header-section-number">1.31.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-30"><span class="header-section-number">1.31.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-8"><span class="header-section-number">1.31.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-30"><span class="header-section-number">1.31.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-30"><span class="header-section-number">1.31.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setprocdiscretebydata"><span class="header-section-number">1.32</span> SetProcDiscreteByData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-31"><span class="header-section-number">1.32.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-31"><span class="header-section-number">1.32.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameters-9"><span class="header-section-number">1.32.3</span> Parameters</a></li>
+<li><a class="nav-link" href="#return-value-31"><span class="header-section-number">1.32.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-31"><span class="header-section-number">1.32.5</span> Example</a></li>
 </ul>
 </li>
 </ul>
@@ -771,7 +771,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-16.</p>
+    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-17.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

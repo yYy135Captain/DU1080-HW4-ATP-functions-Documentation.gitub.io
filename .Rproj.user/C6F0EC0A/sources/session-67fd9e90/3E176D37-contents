@@ -1,0 +1,116 @@
+# PowerSupply {.unnumbered}
+
+## PowerSupplyInitialize
+
+### Header
+
+```         
+int DLLEXPORT _stdcall PowerSupplyInitialize(char *resource_name, double voltage_ovp, ViSession *power_supply_handle, ViBoolean *test_result, char *status_message)
+```
+
+### Purpose
+
+Initializes the DC Power Supply
+
+### Parameters
+
+| Parameter             | Type         | Purpose                 |
+|-----------------------|--------------|-------------------------|
+| `resource_name`       | char \*      | resource name           |
+| `voltage_ovp`         | double       | over voltage protection |
+| `power_supply_handle` | ViSession \* | power supply handle     |
+| `test_result`         | ViBoolean \* | test result             |
+| `status_message`      | char \*      | status message          |
+
+### Return Value
+
+| Error Code | Error                     |
+|------------|---------------------------|
+| `0`        | Success                   |
+| `!=0`      | Couldn't send the command |
+
+### Example
+
+## PowerSupplyOutputState
+
+### Header
+
+### Purpose
+
+### Parameters
+
+### Return Value
+
+### Example
+
+## PowerSupplySetVoltageCurrent
+
+### Header
+
+### Purpose
+
+### Parameters
+
+### Return Value
+
+### Example
+
+## PowerSupplyPowerOff
+
+### Header
+
+### Purpose
+
+### Parameters
+
+### Return Value
+
+### Example
+
+## PowerSupplyShutDown
+
+### Header
+
+### Purpose
+
+### Parameters
+
+### Return Value
+
+### Example
+
+## PowerSupplyMeasureVoltage
+
+### Header
+
+### Purpose
+
+### Parameters
+
+### Return Value
+
+### Example
+
+## PowerSupplyMeasureCurrent
+
+### Header
+
+### Purpose
+
+### Parameters
+
+### Return Value
+
+### Example
+
+## PowerSupplyInitializeVoltageCurrent
+
+### Header
+
+### Purpose
+
+### Parameters
+
+### Return Value
+
+### Example

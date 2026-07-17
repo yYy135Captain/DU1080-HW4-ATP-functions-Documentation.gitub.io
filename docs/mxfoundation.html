@@ -44,7 +44,23 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html">MxFoundation</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">Instruments</li>
+<li><a class="" href="agmtestbox.html">AGMTestBox</a></li>
+<li><a class="" href="chroma2238.html">Chroma2238</a></li>
+<li><a class="" href="daq.html">DAQ</a></li>
+<li><a class="" href="dmm.html">DMM</a></li>
+<li><a class="" href="graphicsdiscreteio.html">GraphicsDiscreteIO</a></li>
+<li><a class="" href="interfacebox.html">InterfaceBox</a></li>
+<li><a class="" href="mux.html">MUX</a></li>
+<li><a class="active" href="mxfoundation.html">MxFoundation</a></li>
+<li><a class="" href="photometer.html">Photometer</a></li>
+<li><a class="" href="pickeringrelay.html">PickeringRelay</a></li>
+<li><a class="" href="powersupply.html">PowerSupply</a></li>
+<li><a class="" href="relay.html">Relay</a></li>
+<li><a class="" href="serialuart.html">SerialUART</a></li>
+</ul>
 
         <div class="book-extra">
           
@@ -1070,11 +1086,158 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="mux.html">MUX</a></div>
+<div class="next"><a href="photometer.html">Photometer</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#mxfoundation">MxFoundation</a></li>
+<li><a class="nav-link" href="#overview-2">Overview</a></li>
+<li>
+<a class="nav-link" href="#mxfoundationinitialize"><span class="header-section-number">1.9</span> MxFoundationInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-8"><span class="header-section-number">1.9.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-8"><span class="header-section-number">1.9.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-5"><span class="header-section-number">1.9.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-8"><span class="header-section-number">1.9.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-8"><span class="header-section-number">1.9.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#mxfoundationclose"><span class="header-section-number">1.10</span> MxFoundationClose</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-9"><span class="header-section-number">1.10.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-9"><span class="header-section-number">1.10.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-6"><span class="header-section-number">1.10.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-9"><span class="header-section-number">1.10.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-9"><span class="header-section-number">1.10.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429channelinitialize"><span class="header-section-number">1.11</span> ARINC429ChannelInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-10"><span class="header-section-number">1.11.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-10"><span class="header-section-number">1.11.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-7"><span class="header-section-number">1.11.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-10"><span class="header-section-number">1.11.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-10"><span class="header-section-number">1.11.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429setupreceivedata"><span class="header-section-number">1.12</span> Arinc429SetupReceiveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-11"><span class="header-section-number">1.12.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-11"><span class="header-section-number">1.12.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-8"><span class="header-section-number">1.12.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-11"><span class="header-section-number">1.12.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-11"><span class="header-section-number">1.12.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429senddata"><span class="header-section-number">1.13</span> Arinc429SendData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-12"><span class="header-section-number">1.13.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-12"><span class="header-section-number">1.13.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-9"><span class="header-section-number">1.13.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-12"><span class="header-section-number">1.13.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-12"><span class="header-section-number">1.13.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429receivedata"><span class="header-section-number">1.14</span> Arinc429ReceiveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-13"><span class="header-section-number">1.14.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-13"><span class="header-section-number">1.14.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-10"><span class="header-section-number">1.14.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-13"><span class="header-section-number">1.14.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-13"><span class="header-section-number">1.14.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429freebuffers"><span class="header-section-number">1.15</span> Arinc429FreeBuffers</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-14"><span class="header-section-number">1.15.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-14"><span class="header-section-number">1.15.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-11"><span class="header-section-number">1.15.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-14"><span class="header-section-number">1.15.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-14"><span class="header-section-number">1.15.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc429selftest"><span class="header-section-number">1.16</span> Arinc429SelfTest</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-15"><span class="header-section-number">1.16.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-15"><span class="header-section-number">1.16.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-12"><span class="header-section-number">1.16.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-15"><span class="header-section-number">1.16.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-15"><span class="header-section-number">1.16.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708channelinitialize"><span class="header-section-number">1.17</span> ARINC708ChannelInitialize</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-16"><span class="header-section-number">1.17.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-16"><span class="header-section-number">1.17.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-13"><span class="header-section-number">1.17.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-16"><span class="header-section-number">1.17.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-16"><span class="header-section-number">1.17.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708setupreceivedata"><span class="header-section-number">1.18</span> Arinc708SetupReceiveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-17"><span class="header-section-number">1.18.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-17"><span class="header-section-number">1.18.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-14"><span class="header-section-number">1.18.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-17"><span class="header-section-number">1.18.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-17"><span class="header-section-number">1.18.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708senddata"><span class="header-section-number">1.19</span> Arinc708SendData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-18"><span class="header-section-number">1.19.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-18"><span class="header-section-number">1.19.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-15"><span class="header-section-number">1.19.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-18"><span class="header-section-number">1.19.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-18"><span class="header-section-number">1.19.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708receivedata"><span class="header-section-number">1.20</span> Arinc708ReceiveData</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-19"><span class="header-section-number">1.20.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-19"><span class="header-section-number">1.20.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-16"><span class="header-section-number">1.20.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-19"><span class="header-section-number">1.20.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-19"><span class="header-section-number">1.20.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708freebuffers"><span class="header-section-number">1.21</span> Arinc708FreeBuffers</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-20"><span class="header-section-number">1.21.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-20"><span class="header-section-number">1.21.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-17"><span class="header-section-number">1.21.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-20"><span class="header-section-number">1.21.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-20"><span class="header-section-number">1.21.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708selftest"><span class="header-section-number">1.22</span> Arinc708SelfTest</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-21"><span class="header-section-number">1.22.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-21"><span class="header-section-number">1.22.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-18"><span class="header-section-number">1.22.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-21"><span class="header-section-number">1.22.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-21"><span class="header-section-number">1.22.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#arinc708displaydataarray"><span class="header-section-number">1.23</span> Arinc708DisplayDataArray</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-22"><span class="header-section-number">1.23.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-22"><span class="header-section-number">1.23.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-19"><span class="header-section-number">1.23.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-22"><span class="header-section-number">1.23.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-22"><span class="header-section-number">1.23.5</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#setparitybit"><span class="header-section-number">1.24</span> SetParityBit</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#header-23"><span class="header-section-number">1.24.1</span> Header</a></li>
+<li><a class="nav-link" href="#purpose-23"><span class="header-section-number">1.24.2</span> Purpose</a></li>
+<li><a class="nav-link" href="#parameter-20"><span class="header-section-number">1.24.3</span> Parameter</a></li>
+<li><a class="nav-link" href="#return-value-23"><span class="header-section-number">1.24.4</span> Return Value</a></li>
+<li><a class="nav-link" href="#example-23"><span class="header-section-number">1.24.5</span> Example</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
@@ -1090,7 +1253,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-16.</p>
+    <p>"<strong>DU1080 HW4 ATP Function Documentation</strong>" was written by . It was last built on 2026-07-17.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

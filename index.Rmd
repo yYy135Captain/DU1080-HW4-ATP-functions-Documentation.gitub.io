@@ -1,5 +1,5 @@
 ---
-title: "DU1080 HW4 ATP Function Documentation"
+title: "DU1080 HW4 ATP Function"
 author: Tiffany Jia / Yuxuan Sun
 date: "`r Sys.Date()`"
 site: bookdown::bs4_book 

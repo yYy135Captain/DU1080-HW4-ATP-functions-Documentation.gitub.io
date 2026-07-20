@@ -56,10 +56,10 @@ pre code {
   --color-text-muted: #384348;
   
   /* Borders around tables, cards, code blocks, and inputs. */
-  --color-border: #A9ADAE;
+  --color-border: ##A9ADAE;
   
   /* Background used for code blocks. */
-  --color-code-bg: #D5D7D8;
+  --color-code-bg: #cc3600;
   
   /*------Typography------*/
   /* BOFY FONT: used for paragraph, tables, and descriptions. */

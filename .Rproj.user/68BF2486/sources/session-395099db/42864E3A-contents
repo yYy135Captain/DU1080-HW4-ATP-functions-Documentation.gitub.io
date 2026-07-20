@@ -56,7 +56,7 @@ pre code {
   --color-text-muted: #384348;
   
   /* Borders around tables, cards, code blocks, and inputs. */
-  --color-border: #A9ADAE;
+  --color-border: ##A9ADAE;
   
   /* Background used for code blocks. */
   --color-code-bg: #D5D7D8;
@@ -180,11 +180,60 @@ html[data-theme="dark"] {
   These styles apply to the entire website.
   =========================================================================== */
 
+html {
+  margin: 0;
   
+  background-color: var(--color-page-bg);
+  color: var(--color-text);
   
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: 1.6;
   
+  transition:
+    background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+/* Apply predictable box sizing to every element; */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
   
-  
+ 
+/* =============================================================================
+  5. TYPOGRAPHY
+  ------------------------------------------------------------------------------
+  Body text and heading use separate font variables.
+  =========================================================================== */ 
+
+p,
+li,
+td,
+th,
+label,
+input,
+button,
+select,
+textarea {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar,
+.book-summary,
+.book-header {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+}
   
   
   
